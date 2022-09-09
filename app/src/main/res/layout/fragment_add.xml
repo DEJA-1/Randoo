@@ -5,27 +5,37 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@drawable/gradient_background"
+    android:padding="24dp"
     tools:context="fragments.AddFragment">
 
-    <EditText
-        android:id="@+id/new_task_text"
-        android:layout_marginTop="250dp"
-        android:padding="16dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout"
         android:layout_width="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/green"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:hint="@string/new_task_string"
-        android:textColor="@color/green"
+        android:layout_marginBottom="180dp"
+        android:hint="Enter task"
         android:textColorHint="@color/green"
-        android:gravity="center"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/text_input_layout_stroke_color"
+        app:boxStrokeWidth="3dp"
+        app:startIconDrawable="@drawable/ic_baseline_create_24"
+        app:startIconTint="@color/green"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/red_400"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints=""
-        android:inputType="text" />
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/new_task_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/new_task_button"
@@ -35,7 +45,7 @@
         android:textSize="16sp"
         android:text="@string/new_task_button_string"
         android:textStyle="bold|italic"
-        app:layout_constraintTop_toBottomOf="@id/new_task_text"
+        app:layout_constraintTop_toBottomOf="@id/text_input_layout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
