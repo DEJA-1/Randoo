@@ -9,4 +9,5 @@
     <string name="new_task_button_string">Save</string>
     <string name="update_task_button_string">Update</string>
     <string name="menu_delete_string">Delete</string>
+    <string name="enter_task">Enter task</string>
 </resources>

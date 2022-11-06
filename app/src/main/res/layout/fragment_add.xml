@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="180dp"
-        android:hint="Enter task"
+        android:hint="@string/enter_task"
         android:textColorHint="@color/green"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:boxStrokeColor="@color/text_input_layout_stroke_color"
